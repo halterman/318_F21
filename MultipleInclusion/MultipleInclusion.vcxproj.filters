@@ -23,7 +23,7 @@
     <ClInclude Include="widget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="widgetuser.h">
+    <ClInclude Include="widgetholder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

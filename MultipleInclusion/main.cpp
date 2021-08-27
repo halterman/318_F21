@@ -1,11 +1,16 @@
 #include <iostream>
 #include "widget.h"
-#include "widgetuser.h"
+#include "widgetholder.h"
+
+/*
+ * Simple example showing how include guards
+ * prevent multiple inclusion
+ */
 
 int main() {
     Widget w{ 42 };
-    WidgetUser wid_user{ 100 };
+    WidgetHolder wid_box{ 100 };
 
     std::cout << "w        : " << w.get() << '\n';
-    std::cout << "wid_user : " << wid_user.get() << '\n';
+    std::cout << "wid_user : " << wid_box.get() << '\n';
 }
