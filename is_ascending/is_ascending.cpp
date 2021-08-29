@@ -29,11 +29,11 @@ int main() {
     timer.start();
     std::cout << is_ascending1(bigvec) << '\n';
     timer.stop();
-    std::cout << timer.elapsed() << " msec elapsed" << '\n';
+    std::cout << timer.elapsed() << " sec elapsed" << '\n';
 
     timer.reset();
     timer.start();
     std::cout << is_ascending2(bigvec) << '\n';
     timer.stop();
-    std::cout << timer.elapsed() << " msec elapsed" << '\n';
+    std::cout << timer.elapsed() << " sec elapsed" << '\n';
 }
