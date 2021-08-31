@@ -1,4 +1,5 @@
 #include <iostream>
+#include <functional>
 #include <vector>
 #include "stopwatch.h"
 
@@ -20,20 +21,32 @@ bool is_ascending2(const std::vector<int>& v) {
 }
 
 
+void time_it(const std::vector<int>& v, std::function<bool(const std::vector<int>&)> f) {
+    Stopwatch timer;
+    timer.start();
+    std::cout << f(v) << '\n';
+    timer.stop();
+    std::cout << timer.elapsed() << " sec elapsed" << '\n';
+}
+
+
 int main() {
-    std::vector<int> bigvec(30000);
+    std::vector<int> bigvec(300000);
     for (size_t i = 0; i < bigvec.size(); i++)
         bigvec[i] = i;
 
-    Stopwatch timer;
-    timer.start();
-    std::cout << is_ascending1(bigvec) << '\n';
-    timer.stop();
-    std::cout << timer.elapsed() << " sec elapsed" << '\n';
+    time_it(bigvec, is_ascending1);
+    time_it(bigvec, is_ascending2);
 
-    timer.reset();
-    timer.start();
-    std::cout << is_ascending2(bigvec) << '\n';
-    timer.stop();
-    std::cout << timer.elapsed() << " sec elapsed" << '\n';
+    //Stopwatch timer;
+    //timer.start();
+    //std::cout << is_ascending1(bigvec) << '\n';
+    //timer.stop();
+    //std::cout << timer.elapsed() << " sec elapsed" << '\n';
+
+    //timer.reset();
+    //timer.start();
+    //std::cout << is_ascending2(bigvec) << '\n';
+    //timer.stop();
+    //std::cout << timer.elapsed() << " sec elapsed" << '\n';
 }

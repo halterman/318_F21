@@ -1,4 +1,3 @@
-#include <cstdlib>
 #include "stopwatch.h"
 
 // Creates a Stopwatch object
