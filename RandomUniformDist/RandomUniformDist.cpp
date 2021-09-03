@@ -49,7 +49,7 @@ void test_random_distribution(const std::string& name, int num_values, int runs,
 
 
 int main() {
-    const int NUMBER_OF_VALUES = 10000; // 10;  // Use 10,000 to see a difference
+    const int NUMBER_OF_VALUES =  10;  // Use 10,000 to see a difference
 
     const int RUNS = 10'000'000;
 
